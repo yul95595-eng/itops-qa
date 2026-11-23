@@ -1,0 +1,34 @@
+# 构建上下文排除项（只影响 docker build，不影响 git）
+
+.git
+.gitignore
+.env
+config.local.ini
+
+# Python 缓存
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*.egg-info/
+
+# 日志
+logs/
+*.log
+
+# 模型权重（2GB+，运行时由 volume 挂载）
+retrieval/models/
+
+# 运行期产物
+data/uploads/
+*.sqlite3
+*.db
+
+# 文档与个人材料（镜像内不需要）
+docs/
+项目总结.html
+*.bak
+README.md
+
+# 启动脚本（宿主机用，容器内不需要）
+start.sh
+启动.bat

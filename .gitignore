@@ -1,0 +1,73 @@
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# ===== 虚拟环境 =====
+venv/
+.venv/
+env/
+
+# ===== IDE =====
+.idea/
+.vscode/
+*.iml
+
+# ===== 私密信息（密钥不入库）=====
+.env
+
+# ===== 日志 =====
+logs/
+*.log
+
+# ===== 模型文件（大文件不入库）=====
+models/
+retrieval/models/
+*.bin
+*.h5
+*.safetensors
+*.pt
+*.pth
+*.onnx
+
+# ===== 数据缓存 =====
+*.sqlite3
+*.db
+
+# ===== WorkBuddy 工作目录 =====
+.workbuddy/
+
+# ===== 仓库备份目录（防止误入库）=====
+.git.bak*/
+.git.bak-*
+
+# ===== 系统 =====
+.DS_Store
+Thumbs.db
+
+# ===== 本地真实配置（含口令，绝不入库）=====
+config.local.ini
+
+# ===== 个人面试/学习材料（不属于项目文档，不入公开仓库）=====
+# 根目录
+/01-项目讲解稿.md
+/03-项目逐字稿要求.md
+/面试拷打.md
+/项目总结.html
+# docs/
+docs/面试拷打-详细版.md
+docs/面试模拟拷打记录.md
+docs/面试模拟拷打记录.md.bak
+docs/评测体系与结果解读.md
+docs/项目重建提示词.md
+docs/后端从零搭建顺序.md
+docs/周志-*.md
+docs/上线效果总结*.html
+docs/上线效果总结*.md
+# 未接入主链路的实验代码（无任何模块引用，暂不入库）
+service/agent.py
+tests/1.py
+tests/2.py

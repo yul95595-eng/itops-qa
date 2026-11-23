@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "current": "v1",
+  "versions": {
+    "v1": {
+      "quality": {
+        "file": "v1.jsonl",
+        "sha256": "915af8ea2aa9eeaa3be4db541384f21814e97aa4fbc1ed1452bf09089c0266ad",
+        "cases": 40,
+        "frozen": true,
+        "created_at": "2026-11-18",
+        "drift_from_source": false
+      },
+      "retrieval": {
+        "file": "v1.retrieval.jsonl",
+        "sha256": "a8dc0b4ced890d58c9fd66a4c8c8ff92c2fad0953bddb1b3856baa69c653d13b",
+        "cases": 32,
+        "frozen": true,
+        "created_at": "2026-11-18",
+        "drift_from_source": false
+      }
+    }
+  }
+}

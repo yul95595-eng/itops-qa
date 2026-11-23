@@ -1,0 +1,44 @@
+# 企业内部 IT 运维知识库助手 依赖清单
+# 安装: pip install -r requirements.txt
+#
+# 注: 本项目完全自包含, 不依赖其他项目。模型文件(bge-m3 / bge-reranker-large)
+#     需预先下载到 retrieval/models/ 目录(参见 retrieval/models/README.md)。
+
+# ===== 向量数据库 =====
+pymilvus>=2.4.0
+milvus-model>=0.1.0
+
+# ===== 数据库 =====
+pymysql>=1.1.0
+DBUtils>=3.0.0
+
+# ===== 缓存 =====
+redis>=5.0.0
+
+# ===== 检索与分词 =====
+rank-bm25>=0.2.2
+jieba>=0.42.1
+numpy>=1.24.0
+
+# ===== 模型与嵌入 =====
+sentence-transformers>=2.2.0
+torch>=2.0.0
+
+# ===== LangChain =====
+langchain>=0.1.0
+langchain-core>=0.1.0
+langchain-community>=0.0.20
+langchain-text-splitters>=0.0.1
+
+# ===== Web 服务(后续 FastAPI 用) =====
+fastapi>=0.110.0
+uvicorn[standard]>=0.27.0
+pydantic>=2.0.0
+
+# ===== 文档上传解析(知识库自助入库) =====
+python-docx>=1.1.0
+pypdf>=4.0.0
+python-multipart>=0.0.9
+openpyxl>=3.1.0
+# md 加载器(UnstructuredMarkdownLoader)依赖, 缺失会导致 import 失败
+unstructured>=0.10.0

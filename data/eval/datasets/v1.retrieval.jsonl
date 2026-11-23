@@ -1,0 +1,32 @@
+{"expect_file": "VPN客户端安装与常见报错", "expect_source": "network", "id": "R01", "note": "对应 VPN 客户端安装与报错, 但不含'安装'字样", "query": "装了 vpn 客户端之后一直报错打不开"}
+{"expect_file": "DNS解析异常排查手册", "expect_source": "network", "id": "R02", "note": "DNS 解析异常的典型口述", "query": "打开网站提示找不到服务器"}
+{"expect_file": "办公网带宽占用过高排查指南", "expect_source": "network", "id": "R03", "note": "带宽占用 / 延迟丢包", "query": "网速很慢，打开什么都卡"}
+{"expect_file": "办公网有线接入与IP地址申请规范", "expect_source": "network", "id": "R04", "note": "有线接入 + 内网外网排查", "query": "插上网线还是上不了网"}
+{"expect_file": "无线AP漫游切换异常排查", "expect_source": "network", "id": "R05", "note": "无线 AP 漫游 / 设备绑定", "query": "公司 wifi 连上就掉线，反复重连"}
+{"expect_file": "SSL证书更新与内网证书信任导入", "expect_source": "network", "id": "R06", "note": "SSL 证书信任导入", "query": "访问内网系统提示证书不安全"}
+{"expect_file": "双网卡路由冲突与优先级设置", "expect_source": "network", "id": "R07", "note": "双网卡路由优先级", "query": "两个网卡都有网，流量走哪个"}
+{"expect_file": "远程桌面无法连接内网主机排查", "expect_source": "network", "id": "R08", "note": "远程桌面 / 堡垒机通道", "query": "在家连不上公司电脑的桌面"}
+{"expect_file": "离职员工账号回收规范", "expect_source": "account", "id": "R09", "note": "离职账号回收规范", "query": "离职了邮箱还能用吗"}
+{"expect_file": "邮箱容量清理与归档指南", "expect_source": "account", "id": "R10", "note": "容量清理与归档", "query": "邮箱满了收不到新邮件"}
+{"expect_file": "邮件钓鱼与反欺诈识别指南", "expect_source": "account", "id": "R11", "note": "邮件钓鱼识别 —— 关键词完全不重合", "query": "收到一封说是财务部让改密码的邮件"}
+{"expect_file": "多因素认证(MFA)强制开启说明", "expect_source": "account", "id": "R12", "note": "MFA 多因素认证绑定", "query": "换了手机，验证码收不到"}
+{"expect_file": "新员工入职IT账号开通时间表", "expect_source": "account", "id": "R13", "note": "入职账号开通时间表", "query": "新同事第一天来，账号什么时候能给"}
+{"expect_file": "邮箱签名与自动回复设置规范", "expect_source": "account", "id": "R14", "note": "签名与自动回复规范", "query": "邮箱签名想统一成公司模板"}
+{"expect_file": "账号异地登录告警与处理流程", "expect_source": "account", "id": "R15", "note": "异地登录告警处置", "query": "同一个账号在别的城市登录了"}
+{"expect_file": "外包人员账号管理规范", "expect_source": "account", "id": "R16", "note": "外包人员账号管理规范", "query": "外包人员的账号怎么管"}
+{"expect_file": "PDF打印空白与编码问题排查", "expect_source": "printer", "id": "R17", "note": "PDF 打印空白 / 缺粉", "query": "打印出来一半是空白"}
+{"expect_file": "网络打印机无法打印排查指南", "expect_source": "printer", "id": "R18", "note": "离线 / 端口异常", "query": "打印机显示脱机"}
+{"expect_file": "打印机驱动安装手册", "expect_source": "printer", "id": "R19", "note": "驱动安装 / 共享连接", "query": "换了新电脑连不上打印机"}
+{"expect_file": "扫描到邮箱功能配置说明", "expect_source": "printer", "id": "R20", "note": "扫描到邮箱配置", "query": "扫描件发不到邮箱"}
+{"expect_file": "彩色打印权限申请与配额管理", "expect_source": "printer", "id": "R21", "note": "彩色打印权限配额", "query": "彩打申请怎么弄"}
+{"expect_file": "打印乱码与字体缺失排查", "expect_source": "printer", "id": "R22", "note": "字体缺失 / 驱动不匹配", "query": "打印出来字是乱码"}
+{"expect_file": "键盘鼠标失灵与更换申请", "expect_source": "printer", "id": "R23", "note": "外设接入(归在 printer 子域)", "query": "键盘打字没反应"}
+{"expect_file": "会议平板与投屏设备连接说明", "expect_source": "printer", "id": "R24", "note": "投影 / 会议平板", "query": "会议室投屏没画面"}
+{"expect_file": "Office激活失败与修复指南", "expect_source": "software", "id": "R25", "note": "激活失败与修复", "query": "office 提示盗版"}
+{"expect_file": "系统性能监控与资源占用分析", "expect_source": "software", "id": "R26", "note": "资源占用 / 性能分析", "query": "电脑开机风扇狂转"}
+{"expect_file": "杀毒软件拦截程序的放行方法", "expect_source": "software", "id": "R27", "note": "杀毒白名单放行", "query": "装的软件被安全软件拦了"}
+{"expect_file": "系统时间不同步与时钟服务", "expect_source": "software", "id": "R28", "note": "时钟服务 / 时间同步", "query": "电脑时间老是变"}
+{"expect_file": "系统更新失败与回滚处理", "expect_source": "software", "id": "R29", "note": "更新失败与回滚", "query": "系统更新卡住不动"}
+{"expect_file": "桌面图标丢失与开始菜单异常", "expect_source": "software", "id": "R30", "note": "桌面图标 / 开始菜单异常", "query": "桌面上图标都没了"}
+{"expect_file": "软件多版本共存与冲突解决", "expect_source": "software", "id": "R31", "note": "多版本共存", "query": "装了两个版本的 python 冲突"}
+{"expect_file": "软件崩溃与日志收集方法", "expect_source": "software", "id": "R32", "note": "崩溃日志收集", "query": "程序一打开就崩溃"}

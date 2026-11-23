@@ -1,0 +1,40 @@
+{"category": "口语化", "expect_kw": ["密码", "重置"], "expect_layer": "faq", "id": "A01", "note": "对应账号域-密码自助重置, 但不含'重置'字样, 靠语义命中", "query": "密码想不起来了，怎么弄回来"}
+{"category": "口语化", "expect_kw": ["锁定", "解锁", "30"], "expect_layer": "faq", "id": "A02", "note": "把'域账号被锁定'说成'被锁死', 测同义替换", "query": "账号被锁死了，进不去系统"}
+{"category": "口语化", "expect_kw": ["VPN", "客户端"], "expect_layer": "faq", "id": "A03", "note": "'拨号一直转圈'是真实用户描述, 不是标准问法", "query": "vpn 拨号一直转圈，连不上"}
+{"category": "口语化", "expect_kw": ["打印", "电源", "卡纸"], "expect_layer": "faq", "id": "A04", "note": "描述现象而非报错, 测能不能定位到'无法打印'", "query": "打印机按了没反应，纸也不动"}
+{"category": "口语化", "expect_kw": ["邮箱", "密码", "客户端"], "expect_layer": "faq", "id": "A05", "note": "Outlook 小写 + 口语描述, 测英文实体识别", "query": "outlook 老弹密码框说密码不对"}
+{"category": "口语化", "expect_kw": ["广告", "恶意", "杀毒"], "expect_layer": "rag", "id": "A06", "note": "FAQ 无此题, 只能走 RAG; 对应 Wiki'电脑弹出广告与恶意软件处理'", "query": "电脑老弹广告，烦死了"}
+{"category": "口语化", "expect_kw": ["U 盘", "USB", "接口"], "expect_layer": "faq", "id": "A07", "note": "'认不出来'=无法识别, 测口语到术语的映射", "query": "U 盘插上电脑认不出来"}
+{"category": "口语化", "expect_kw": ["WiFi", "DNS", "IP"], "expect_layer": "faq", "id": "A08", "note": "FAQ 有'WiFi 连上但上不了网', 但措辞完全不同", "query": "无线网有信号但网页打不开"}
+{"category": "口语化", "expect_kw": ["投影", "信号", "HDMI"], "expect_layer": "faq", "id": "A09", "note": "涉及会议室设备, 测跨子域的定位", "query": "会议室投影仪连不上我的电脑"}
+{"category": "口语化", "expect_kw": ["邮件", "垃圾", "拦截"], "expect_layer": "faq", "id": "A10", "note": "与'邮箱收不到邮件'镜像, 但描述视角是发件人", "query": "邮件发出去了对方说没收到"}
+{"category": "口语化", "expect_kw": ["开机", "启动", "自启动"], "expect_layer": "rag", "id": "A11", "note": "带具体数字'三分钟', 对应 Wiki'电脑开机慢与优化建议'", "query": "电脑开机要等三分钟"}
+{"category": "口语化", "expect_kw": ["激活", "Office"], "expect_layer": "faq", "id": "A12", "note": "英文软件名小写 + 口语, 测实体识别", "query": "office 老提示要激活"}
+{"category": "错别字", "expect_kw": ["打印", "驱动"], "expect_layer": "faq", "id": "B01", "note": "打印机→打应机, 同音错字", "query": "打应机驱动怎么装"}
+{"category": "错别字", "expect_kw": ["蓝屏"], "expect_layer": "faq", "id": "B02", "note": "蓝屏→蓝平, 最典型的输入法错字", "query": "蓝平了怎么办"}
+{"category": "错别字", "expect_kw": ["网络", "IP", "端口"], "expect_layer": "faq", "id": "B03", "note": "网络→网洛, 测容错", "query": "网线插上了但是没网洛"}
+{"category": "错别字", "expect_kw": ["附件", "大小"], "expect_layer": "faq", "id": "B04", "note": "附件→付件", "query": "邮箱发不出付件"}
+{"category": "错别字", "expect_kw": ["共享", "权限"], "expect_layer": "faq", "id": "B05", "note": "文档→文当", "query": "共享文当打不开"}
+{"category": "错别字", "expect_kw": ["VPN", "连接"], "expect_layer": "faq", "id": "B06", "note": "连接→连节", "query": "vpn 怎么连节"}
+{"category": "错别字", "expect_kw": ["杀毒", "白名单", "恢复"], "expect_layer": "faq", "id": "B07", "note": "杀毒→杀度", "query": "杀度软件把程序删了"}
+{"category": "错别字", "expect_kw": ["开机", "启动"], "expect_layer": "rag", "id": "B08", "note": "开机→开极", "query": "电脑开极很慢"}
+{"category": "错误码", "expect_code": "1045", "expect_kw": ["1045"], "expect_layer": "error_code", "id": "C01", "note": "错误码在句尾, 无'error'前缀", "query": "数据库连不上，报 1045"}
+{"category": "错误码", "expect_code": "ORA-12541", "expect_kw": ["ORA-12541"], "expect_layer": "error_code", "id": "C02", "note": "Oracle 错误码 + 情绪词干扰", "query": "启动报 ORA-12541 急死了"}
+{"category": "错误码", "expect_code": "0x80072EE7", "expect_kw": ["0x80072EE7"], "expect_layer": "error_code", "id": "C03", "note": "十六进制码, 测 0x 前缀是否被正确保留", "query": "蓝屏代码 0x80072EE7"}
+{"category": "错误码", "expect_code": "WRONGPASS", "expect_kw": ["WRONGPASS"], "expect_layer": "error_code", "id": "C04", "note": "Redis 关键字型错误码", "query": "redis 报 WRONGPASS 认证失败"}
+{"category": "错误码", "expect_code": "404", "expect_kw": ["404"], "expect_layer": "error_code", "id": "C05", "note": "HTTP 状态码, 只有 3 位", "query": "网页打不开显示 404"}
+{"category": "错误码", "expect_code": "1064", "expect_kw": ["1064"], "expect_layer": "error_code", "id": "C06", "note": "带 error 前缀的标准写法", "query": "系统提示 error 1064"}
+{"category": "错误码", "expect_code": "1049", "expect_kw": ["1049"], "expect_layer": "error_code", "id": "C07", "note": "错误码 + 中文解释混排", "query": "MySQL 报 1049 找不到库"}
+{"category": "错误码", "expect_code": "ERR_CONNECTION_RESET", "expect_kw": ["ERR_CONNECTION_RESET"], "expect_layer": "error_code", "id": "C08", "note": "长下划线错误码", "query": "浏览器 ERR_CONNECTION_RESET"}
+{"category": "混合意图", "expect_kw": ["VPN", "邮件"], "expect_layer": "faq", "id": "D01", "note": "两个域叠加, 理想行为是分点回答或追问先解决哪个", "query": "vpn 连不上，而且邮箱也收不到信"}
+{"category": "混合意图", "expect_kw": ["账号", "电脑"], "expect_layer": "faq", "id": "D02", "note": "账号域 + 资产申领, 跨子域", "query": "新员工入职要开哪些账号，电脑什么时候能领"}
+{"category": "混合意图", "expect_kw": ["卡纸", "乱码"], "expect_layer": "faq", "id": "D03", "note": "同一设备两个故障, 测能否覆盖", "query": "打印机卡纸了，打出来还是乱码"}
+{"category": "混合意图", "expect_kw": ["密码", "复杂", "策略"], "expect_layer": "faq", "id": "D04", "note": "操作诉求 + 政策咨询", "query": "密码忘了，顺便问下密码策略多长"}
+{"category": "越界", "expect_kw": [], "expect_layer": "fallback", "id": "E01", "note": "完全无关, 测是否会被硬答", "query": "今天天气怎么样", "should_refuse": true}
+{"category": "越界", "expect_kw": [], "expect_layer": "fallback", "id": "E02", "note": "创作类请求, 不是知识问答", "query": "帮我写一首关于春天的诗", "should_refuse": true}
+{"category": "越界", "expect_kw": [], "expect_layer": "fallback", "id": "E03", "note": "生活常识, 知识库无", "query": "北京到上海高铁要多久", "should_refuse": true}
+{"category": "越界", "expect_kw": [], "expect_layer": "fallback", "id": "E04", "note": "金融领域, 知识库无", "query": "股票怎么开户", "should_refuse": true}
+{"category": "越界", "expect_kw": [], "expect_layer": "fallback", "id": "E05", "note": "企业内部信息, IT 知识库不覆盖 —— 最容易误答的一类", "query": "公司年会在哪里办", "should_refuse": true}
+{"category": "越界", "expect_kw": [], "expect_layer": "fallback", "id": "E06", "note": "烹饪, 与 IT 完全无关", "query": "红烧肉怎么做", "should_refuse": true}
+{"category": "越界", "expect_kw": [], "expect_layer": "fallback", "id": "E07", "note": "推荐类请求", "query": "推荐一部好看的电影", "should_refuse": true}
+{"category": "越界", "expect_kw": [], "expect_layer": "fallback", "id": "E08", "note": "开放性观点题 —— 知识库无标准答案, 应拒答", "query": "人工智能会取代人类吗", "should_refuse": true}
