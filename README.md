@@ -207,6 +207,10 @@ docker compose down           # 停止（数据卷保留）
 docker compose down -v        # 停止并清空数据
 ```
 
+> **构建耗时说明**：首次构建需下载约 1GB 依赖（其中 torch 单包 539MB）。
+> 实测 450KB/s 带宽下约需 40 分钟，且大包容易断流；建议在网络良好时构建，
+> 或在一台已构建好的机器上 `docker save itops-qa:latest | gzip > app.tar.gz` 再 `docker load` 导入。
+
 ### 方式三：开发模式（宿主机直跑，改代码即时生效）
 
 ```bash
