@@ -16,19 +16,24 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
 
 WORKDIR /app
 
-# libmagic1: unstructured 识别文件类型所需; curl: 供 HEALTHCHECK 使用
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends libmagic1 curl \
+# 系统依赖: libmagic1 供 unstructured 识别文件类型, curl 供 HEALTHCHECK
+# libgomp1 是 torch 运行时的 OpenMP 依赖
+# 换国内 Debian 源: deb.debian.org 在国内经常卡在索引下载(实测 10 分钟无进展)
+RUN sed -i 's|deb.debian.org|mirrors.aliyun.com|g' /etc/apt/sources.list.d/debian.sources 2>/dev/null || true; \
+    sed -i 's|deb.debian.org|mirrors.aliyun.com|g' /etc/apt/sources.list 2>/dev/null || true; \
+    apt-get update \
+    && apt-get install -y --no-install-recommends libmagic1 libgomp1 curl \
     && rm -rf /var/lib/apt/lists/*
 
-# 依赖层: 先装 CPU 版 torch, 再装 requirements(已满足的 torch 会被跳过)
-# pip 走国内镜像源, 显著加速; 需要官方源可 --build-arg PIP_INDEX=https://pypi.org/simple
+# 依赖层: torch 走 PyPI 镜像并跳过 GPU 依赖(--no-deps 不装 nvidia-*, 只做 CPU 推理)
+# 说明: 若有外网, 可换成官方 CPU 源更快更小:
+#   RUN pip install --index-url https://download.pytorch.org/whl/cpu torch
 ARG PIP_INDEX=https://pypi.tuna.tsinghua.edu.cn/simple
 ENV PIP_INDEX_URL=${PIP_INDEX} \
     PIP_TRUSTED_HOST=pypi.tuna.tsinghua.edu.cn
 
 COPY requirements.txt ./
-RUN pip install --index-url https://download.pytorch.org/whl/cpu torch \
+RUN pip install --no-deps torch \
     && pip install -r requirements.txt
 
 # 业务代码
